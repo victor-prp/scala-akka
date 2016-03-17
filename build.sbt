@@ -10,6 +10,8 @@ resolvers += "MVN Repo" at "http://mvnrepository.com/artifact"
 
 libraryDependencies += "com.typesafe.akka" % "akka-actor_2.11" % "2.4.2"
 libraryDependencies += "com.typesafe.akka" % "akka-cluster_2.11" % "2.4.2"
+libraryDependencies += "com.typesafe.akka" % "akka-remote_2.11" % "2.4.2"
+libraryDependencies += "com.typesafe.akka" % "akka-cluster-tools_2.11" % "2.4.2"
 
 
 // set the location of the JDK to use for compiling Java code.

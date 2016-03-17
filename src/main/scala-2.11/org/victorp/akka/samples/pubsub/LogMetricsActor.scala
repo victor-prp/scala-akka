@@ -23,6 +23,5 @@ class LogMetricsActor(val eventBus:LogEventBus, logLevel:LogLevel) extends Actor
         eventBus.unsubscribe(self,LogChannel.of(currentLevel))
         currentLevel = updateLogLevel.level
       }
-
   }
 }

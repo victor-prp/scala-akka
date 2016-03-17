@@ -1,13 +1,13 @@
-package org.victorp.akka.samples.cluster
+package org.victorp.akka.samples.distpubsub
 
-import akka.actor.{Actor, ActorLogging}
+import akka.actor.{ActorLogging, Actor}
 import akka.cluster.Cluster
 import akka.cluster.ClusterEvent._
 
 /**
  * @author victorp
  */
-class SimpleClusterListener(val name:String) extends Actor with ActorLogging {
+class PubSubClusterListener(val name:String) extends Actor with ActorLogging {
 
   val cluster = Cluster(context.system)
 
@@ -16,7 +16,6 @@ class SimpleClusterListener(val name:String) extends Actor with ActorLogging {
     //#subscribe
     cluster.subscribe(self,
       classOf[MemberEvent], classOf[UnreachableMember])
-
   }
 
 

@@ -2,13 +2,13 @@ package org.victorp.akka.samples.distpubsub
 
 import akka.actor.{Actor, ActorLogging}
 import akka.cluster.pubsub.{DistributedPubSub, DistributedPubSubMediator}
+import DistributedPubSubMediator.{Subscribe, SubscribeAck}
 
 /**
  * @author victorp
  */
 class Subscriber extends Actor with ActorLogging {
 
-  import DistributedPubSubMediator.{Subscribe, SubscribeAck}
 
   val mediator = DistributedPubSub(context.system).mediator
   // subscribe to the topic named "content"
